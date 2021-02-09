@@ -1,0 +1,51 @@
+.form {
+  font-size: 16px;
+  font-family: "Noto Sans KR", sans-serif;
+  position: relative;
+  background-color: @color-secondary-light;
+  padding: 20px 10px;
+  margin-bottom: 50px;
+
+  &-loading {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+  }
+
+  &-loading-more {
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    z-index: 10;
+    bottom: 100px;
+  }
+
+  .error {
+    background-color: @color-primary-light;
+    text-align: center;
+    padding: 10px;
+    color: @color-secondary-lighten;
+    margin-bottom: 15px;
+    .oi {
+      padding-right: 10px;
+    }
+    &.under {
+      margin-bottom: 0;
+      margin-top: 15px;
+    }
+  }
+
+  .success {
+    background-color: @color-primary;
+    text-align: center;
+    padding: 10px;
+    color: @color-secondary-dark;
+    margin-bottom: 15px;
+    .oi {
+      padding-left: 5px;
+    }
+  }
+}

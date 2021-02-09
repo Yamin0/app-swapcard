@@ -1,0 +1,456 @@
+html {
+  height: 100%;
+}
+.container-fluid {
+  padding: 0;
+}
+.row {
+  justify-content: center;
+  margin: 0;
+}
+body {
+  position: relative;
+  min-height: 100%;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.main-title {
+  font-family: "Lobster", cursive;
+  font-size: 60px;
+  color: #4a69e8;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.second-title {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 24px;
+  color: black;
+  margin-bottom: 20px;
+}
+.module {
+  margin-top: 10px;
+  overflow: hidden;
+  font-size: 16px;
+  font-family: 'Noto Sans KR', sans-serif;
+  padding: 0;
+}
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.btn .oi {
+  font-size: 14px;
+  margin-left: 5px;
+}
+.btn-scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.menu {
+  width: 100%;
+  background: #e1e1e1;
+  height: 60px;
+}
+.menu ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  padding: 0;
+}
+.menu-elem {
+  margin-left: 30px;
+}
+.menu-elem-link {
+  color: black;
+  font-size: 18px;
+  transition: all ease-in-out 0.3s;
+}
+.menu-elem-link:hover,
+.menu-elem-link:focus {
+  text-decoration: none;
+  color: #4a69e8;
+  text-shadow: 1px 1px #56636b;
+}
+@media screen and (max-width: 576px) {
+  .menu ul {
+    display: block;
+    height: 60px;
+  }
+  .menu-elem {
+    width: 100%;
+    background-color: #e1e1e1;
+    padding: 10px;
+    margin-left: 0;
+    border-bottom: 1px solid #56636b;
+  }
+  .menu-elem-link {
+    font-size: 16px;
+  }
+}
+.footer {
+  background: #e1e1e1;
+  height: 80px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.footer-section {
+  width: 100%;
+}
+.footer-elem.social {
+  margin: auto 20px;
+}
+.footer-elem.social img {
+  margin-right: 10px;
+}
+.footer-elem a {
+  color: black;
+  font-size: 14px;
+  transition: all ease-in-out 0.3s;
+}
+.footer-elem a:hover,
+.footer-elem a:focus {
+  text-decoration: none;
+  color: #3c56bc;
+}
+.footer-elem img {
+  width: 40px;
+}
+@media screen and (max-width: 576px) {
+  .footer-elem {
+    margin-bottom: 10px;
+  }
+  .footer-elem a {
+    font-size: 16px;
+  }
+  .footer-elem.social {
+    margin: 0 10px;
+  }
+  .footer-elem.social img {
+    margin-right: 0;
+  }
+}
+.form {
+  font-size: 16px;
+  font-family: "Noto Sans KR", sans-serif;
+  position: relative;
+  background-color: #e1e1e1;
+  padding: 20px 10px;
+  margin-bottom: 50px;
+}
+.form-loading {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+.form-loading-more {
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: 10;
+  bottom: 100px;
+}
+.form .error {
+  background-color: #6483fc;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  margin-bottom: 15px;
+}
+.form .error .oi {
+  padding-right: 10px;
+}
+.form .error.under {
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+.form .success {
+  background-color: #4a69e8;
+  text-align: center;
+  padding: 10px;
+  color: black;
+  margin-bottom: 15px;
+}
+.form .success .oi {
+  padding-left: 5px;
+}
+.home {
+  padding-bottom: 130px;
+}
+.artist-list {
+  padding: 0;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.artist-list-thumb {
+  margin-bottom: 50px;
+}
+.artist-list-thumb-title {
+  text-align: center;
+  margin-bottom: 0;
+  padding: 20px 15px;
+  background-color: #e1e1e1;
+  color: black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 20px;
+  transition: all ease-in-out 0.5s;
+}
+.artist-list-thumb-title:hover,
+.artist-list-thumb-title:focus {
+  color: #4a69e8;
+}
+.artist-list-thumb-title-link {
+  overflow: hidden;
+  padding: 0;
+}
+.artist-list-thumb-title-link:hover {
+  text-decoration: none;
+}
+.artist-list-thumb-body {
+  padding-bottom: 20px;
+  text-align: center;
+  border-left: 3px solid #e1e1e1;
+  border-right: 3px solid #e1e1e1;
+  border-bottom: 3px solid #e1e1e1;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.artist-list-thumb-type {
+  text-align: left;
+  padding: 10px 10px 0 10px;
+  font-size: 14px;
+  font-style: italic;
+}
+.artist-list-result {
+  margin-bottom: 30px;
+  font-size: 22px;
+  padding-bottom: 5px;
+  color: black;
+  border-bottom: 1px solid #56636b;
+  justify-content: left;
+}
+.artist-list-search {
+  background-color: #e1e1e1;
+  padding: 20px 10px;
+  justify-content: space-between;
+}
+.artist-list-search-sort-title {
+  text-align: right;
+  font-size: 18px;
+  padding: 5px 15px;
+  margin: 0;
+}
+@media screen and (max-width: 576px) {
+  .plant-list .main-title {
+    padding-top: 80px;
+  }
+  .plant-list-result {
+    font-size: 18px;
+  }
+  .plant-list-thumb-title {
+    font-size: 22px;
+  }
+}
+.plant-detail {
+  padding-bottom: 150px;
+}
+.plant-detail .main-title {
+  padding-top: 120px;
+}
+.plant-detail .form {
+  padding-top: 150px;
+}
+.plant-detail-fetching {
+  margin-top: 200px;
+}
+.plant-detail-subtitle {
+  margin-bottom: 20px;
+}
+.plant-detail-link {
+  background-color: #6483fc;
+  color: black;
+  transition: all ease-in-out 0.3s;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 15px;
+  border: 2px solid #3c56bc;
+}
+.plant-detail-link .oi {
+  margin-left: 8px;
+  font-size: 14px;
+}
+.plant-detail-link:hover {
+  text-decoration: none;
+  color: black;
+  background-color: #3c56bc;
+}
+.plant-detail-carrot-link-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 5px 0;
+  border: 2px solid #4a69e8;
+}
+.plant-detail-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: top;
+}
+.plant-detail-data {
+  width: 100%;
+  color: #56636b;
+}
+.plant-detail-data-title {
+  color: #4a69e8;
+  font-size: 24px;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+.plant-detail-data-thumb {
+  padding: 10px 20px;
+  background-color: #e1e1e1;
+  font-size: 16px;
+  font-weight: bold;
+}
+.plant-detail-data-thumb.light {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-content: start;
+}
+.plant-detail-data-thumb.last {
+  padding-bottom: 20px;
+}
+.plant-detail-icon {
+  width: 15%;
+  margin-right: 10px;
+}
+.plant-detail-icon.margin-left {
+  margin-left: 10px;
+}
+.plant-detail-more {
+  position: relative;
+  text-align: center;
+}
+.plant-detail-text {
+  padding: 20px;
+  margin: 30px 30px;
+  color: #56636b;
+  background-color: #e1e1e1;
+  box-shadow: -15px -15px #56636b;
+}
+.plant-detail-text.left {
+  box-shadow: 15px 15px #56636b !important;
+  text-align: right;
+}
+.plant-detail .border-carrot {
+  margin: 30px 0;
+}
+.plant-detail-visual {
+  margin-bottom: 40px;
+}
+.plant-detail-similar {
+  margin-top: 50px;
+}
+.plant-detail-similar-title {
+  font-family: "Lobster", cursive;
+  text-align: center;
+  font-size: 50px;
+  color: #4a69e8;
+  margin-bottom: 50px;
+}
+.plant-link .modal-header {
+  flex-wrap: wrap;
+}
+.plant-link-img {
+  width: 20px;
+  vertical-align: text-bottom;
+  margin-right: 10px;
+}
+.plant-link-form {
+  padding: 0;
+}
+.plant-link-carrot-page {
+  margin-left: 5px;
+  color: #4a69e8;
+  transition: all ease-in-out 0.3s;
+  text-decoration: underline;
+}
+.plant-link-carrot-page:hover {
+  color: #6483fc;
+}
+.plant-link-carrot-page-go {
+  font-size: 12px;
+  color: black;
+  margin-top: 10px;
+  transition: all ease-in-out 0.3s;
+}
+.plant-link-carrot-page-go:hover,
+.plant-link-carrot-page-go:focus {
+  box-shadow: none;
+  text-decoration: none;
+  text-shadow: 2px 2px 5px #56636b;
+}
+.plant-link-carrot-page-go .oi {
+  margin-left: 5px;
+  top: 2px;
+}
+.plant-link .modal-body {
+  background-color: #e1e1e1;
+}
+.plant-link .modal-title {
+  color: #4a69e8;
+  font-size: 22px;
+}
+.plant-link .modal-footer {
+  justify-content: space-between;
+}
+@media screen and (max-width: 576px) {
+  .plant-detail {
+    padding-bottom: 250px;
+  }
+  .plant-detail .main-title {
+    padding-top: 80px;
+    font-size: 40px;
+  }
+  .plant-detail-more {
+    margin-bottom: 30px;
+  }
+  .plant-detail-img {
+    height: 200px;
+  }
+  .plant-detail-content {
+    padding: 0 15px;
+  }
+  .plant-detail .border-carrot {
+    margin: 0;
+  }
+  .plant-detail-similar {
+    margin-top: 30px;
+  }
+  .plant-detail-similar-title {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  .plant-detail-text {
+    font-size: 14px;
+    text-align: justify;
+    margin: 30px 0;
+  }
+  .plant-detail-text.left {
+    text-align: justify;
+  }
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,50 @@
+.footer {
+  background: @color-secondary-light;
+  height: 80px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  &-section {
+    width: 100%;
+  }
+  &-elem {
+    &.social {
+      margin: auto 20px;
+      img {
+        margin-right: 10px;
+      }
+    }
+
+    a {
+      color: black;
+      font-size: 14px;
+      transition: all ease-in-out .3s;
+      &:hover, &:focus {
+        text-decoration: none;
+        color: @color-primary-dark;
+      }
+    }
+
+    img {
+      width: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer {
+    &-elem {
+      margin-bottom: 10px;
+      a {
+        font-size: 16px;
+      }
+      &.social {
+        margin: 0 10px;
+        img {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
