@@ -34,7 +34,7 @@ body {
 }
 
 .module {
-  margin-top: 10px;
+  margin-top: 5px;
   overflow: hidden;
   font-size: 16px;
   font-family: 'Noto Sans KR', sans-serif;
@@ -57,5 +57,22 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    .oi {
+      margin: 0;
+    }
+  }
+
+  &-fav {
+    color: #e8b900;
+    font-size: 28px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    &:hover {
+      color: #e8b900;
+    }
+    &:focus {
+      box-shadow: none;
+    }
   }
 }

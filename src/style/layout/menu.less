@@ -4,6 +4,17 @@
   background: @color-secondary-light;
   height: 60px;
 
+  .container {
+    height: 100%;
+    .row {
+      height: 100%;
+    }
+  }
+
+  &-logo {
+    height: 50px;
+  }
+
   ul {
     list-style-type: none;
     display: flex;
@@ -14,38 +25,28 @@
     padding: 0;
   }
 
+  .oi {
+    font-size: 12px;
+    vertical-align: center;
+    top: 0;
+    margin-right: 8px;
+  }
+
   &-elem {
-    margin-left: 30px;
+    font-size: 22px;
+
+    &.back {
+      margin-left: 30px;
+    }
 
     &-link {
       color: @color-secondary-dark;
-      font-size: 18px;
       transition: all ease-in-out .3s;
 
       &:hover, &:focus {
         text-decoration: none;
         color: @color-primary;
         text-shadow: 1px 1px @color-secondary;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .menu {
-    ul {
-      display: block;
-      height: 60px;
-    }
-    &-elem {
-      width: 100%;
-      background-color: @color-secondary-light;
-      padding: 10px;
-      margin-left: 0;
-      border-bottom: 1px solid @color-secondary;
-
-      &-link {
-        font-size: 16px;
       }
     }
   }

@@ -55,7 +55,9 @@ const Footer: React.FunctionComponent = () => {
                     <div>
                         {
                             !scrollTop &&
-                            <button className="btn btn-secondary btn-scroll-top" onClick={() => window.scrollTo(0, 0)}>Back to top</button>
+                            <button className="btn btn-secondary btn-scroll-top" onClick={() => window.scrollTo(0, 0)}>
+                                <span className="oi oi-arrow-thick-top"/>
+                            </button>
                         }
                     </div>
                 </div>

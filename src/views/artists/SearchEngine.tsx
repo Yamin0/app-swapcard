@@ -2,6 +2,7 @@ import * as React from "react";
 import {ApolloError, QueryLazyOptions} from "@apollo/client";
 import {Error} from "../utils";
 import {SearchQueryArtistsArgs} from "../../generated/graphql";
+import {setSearch} from "./searchUtils";
 
 interface ISearchEngineProps {
     query: string,
@@ -19,6 +20,7 @@ const SearchEngine: React.FunctionComponent<ISearchEngineProps> = ({query, setQu
         if (!e.currentTarget.checkValidity()) {
             (e.currentTarget as HTMLElement).classList.add("was-validated");
         } else {
+            setSearch(query);
             searchArtists({variables: {query, first: loadNb}});
         }
     }

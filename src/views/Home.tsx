@@ -1,16 +1,21 @@
 import * as React from "react";
 import {SEARCH_ARTISTS} from "../requests";
 import {Artist, Maybe, Query, SearchQueryArtistsArgs} from "../generated/graphql";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Loading, LoadingMore} from "./utils";
-import SearchEngine from "./artists/SearchEngine";
+import SearchEngine, {loadNb} from "./artists/SearchEngine";
 import ArtistThumb from "./artists/ArtistThumb";
 import {useLazyQuery} from "@apollo/client";
+import {getSearch} from "./artists/searchUtils";
 
 const Home: React.FunctionComponent = () => {
-    const [query, setQuery] = useState("");
+    const [query, setQuery] = useState(getSearch());
     const [isLoadingMore, setIsLoadingMore] = useState(false);
     const [searchArtists, {called, loading, data, error, fetchMore}] = useLazyQuery<Query, SearchQueryArtistsArgs>(SEARCH_ARTISTS);
+
+    useEffect(() => {
+        if (query !== "") searchArtists({variables: {query, first: loadNb}});
+    }, []);
 
     const total = data?.search?.artists?.totalCount;
     const displayed = data?.search?.artists?.nodes?.length;
@@ -70,7 +75,7 @@ const Home: React.FunctionComponent = () => {
             </div>
             <div className="row artist-list">
                 {
-                    !loading && !error && data && data.search && data.search.artists && data.search.artists.nodes &&
+                     called && !loading && !error && data && data?.search?.artists?.nodes &&
                     data.search.artists.nodes.map((a: Maybe<Artist>) => <ArtistThumb key={a?.id} artist={a as Artist}/>)
                 }
             </div>
